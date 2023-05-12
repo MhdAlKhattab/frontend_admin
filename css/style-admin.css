@@ -1,0 +1,187 @@
+/* Start Deposit Withdraw Investment */
+.withdraw,
+.users {
+  background-image: url('../image/bubble2.png');
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.withdraw .row,
+.users .row {
+  justify-content: space-between;
+}
+
+.withdraw .card {
+  padding: 8vmin;
+  margin-bottom: 5vmin;
+  color: aliceblue;
+  position: relative;
+  margin: 5vmin auto;
+  background: rgb(20 35 51 / 70%);
+}
+
+.withdraw .card i {
+  position: absolute;
+  top: 1vmin;
+  right: 3vmin;
+  color: #004085;
+  cursor: pointer;
+}
+
+.withdraw .card .footer {
+  margin-top: 2vmin;
+}
+
+.withdraw ul li,
+.users ul li {
+  padding: 1vmin 3vmin;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 3vmin;
+  font-weight: 600;
+  color: #FFF;
+  border: 2px solid #FFF;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.withdraw ul li.active,
+.withdraw ul li:hover,
+.users ul li.active,
+.users ul li:hover {
+  background-color: #FFF;
+  border: 2px solid #FFF;
+  color: #466795
+}
+
+.withdraw ul li:hover,
+.users ul li:hover {
+  cursor: pointer
+}
+
+.withdraw img {
+  border-radius: 5px;
+}
+.deposit h3{
+  margin-top: 2vmin;
+}
+
+/* End Deposit Withdraw Investment */
+/* Start Users */
+.users .card {
+  margin-bottom: 5vmin;
+  background-color: rgb(20 35 51 / 70%);
+  color: aliceblue;
+  margin: 5vmin auto;
+  border-radius: 10px;
+}
+
+.users .card i {
+  font-size: 7vmin;
+  color: #318ddd;
+  background-color: aliceblue;
+  border-radius: 10px 10px 0 0;
+  padding: 5vmin;
+}
+
+.users .card h2 {
+  margin: 2vmin 0;
+  padding: 5vmin;
+}
+
+.users .card button {
+  margin-top: 2vmin;
+}
+
+/* End Users */
+
+/* Start Modal */
+
+
+.modal-content {
+  margin-top: 15vh;
+}
+
+.modal-content h4 {
+  color: #004085;
+  padding: 3vh;
+  background: #beccd9;
+  font-size: 5vmin;
+}
+
+.modal-content .modal-body .signup-popup {
+  text-align: start;
+  margin-top: 5vh;
+  display: block;
+}
+
+
+.modal-content .modal-body .signup-popup input,
+.modal-content .modal-body .signup-popup select {
+  padding: 1vh;
+  outline: none;
+  width: 95%;
+  margin-bottom: 2vh;
+}
+
+.modal-content .modal-body .signup-popup .modal-footer {
+  margin-top: 5vh;
+}
+
+.modal-content .modal-body .signup-popup .modal-footer :first-child {
+  color: #FFF;
+  border: 1px solid #28a745;
+  background: #28a745;
+}
+.modal-content .modal-body textarea{
+  outline: none;
+  padding: 2vmin;
+  height: 15vmin;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* End Modal */
+.users .user i {
+  margin-bottom: 2vmin;
+}
+
+.user {
+  width: 30%;
+}
+
+.user .row {
+  border-bottom: 1px solid #535252;
+  padding: 1vmin;
+  margin: 0;
+}
+
+.users .user h4 {
+  font-weight: 600;
+  color: #28a745;
+  padding: 2vmin;
+}
+.deposit .user{
+  padding: 0;
+  margin-bottom: 5vmin !important;
+}
+.deposit img{
+  width: 100% !important;
+  height: 30vh;
+}
+
+@media (max-width: 991px) {
+  .user {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .user {
+    width: 90%;
+    text-align: center;
+  }
+}

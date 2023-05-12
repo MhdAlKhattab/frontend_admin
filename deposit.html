@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style-admin.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Deposit</title>
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <!-- Start Navbar -->
+  <nav class=" navbar navbar-expand-lg navbar-light">
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        <span><img src="image/logo.png"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item " id="home">
+            <a class="nav-link " href="users.html">Users</a>
+          </li>
+          <li class="nav-item" id="about-us">
+            <a class="nav-link" href="investment.html">Investment</a>
+          </li>
+          <li class="nav-item active" id="plans">
+            <a class="nav-link" href="deposit.html">Deposit</a>
+          </li>
+          <li class="nav-item " id="note">
+            <a class="nav-link" href="withdraw.html">Withdraw</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!--Start Admin Deposit-->
+  <div class="withdraw deposit padding-top">
+    <div class="container ">
+      <ul class='list-unstyled '>
+        <li id="all" data-class="all" class="active">All</li>
+        <li id="checked" data-class=".websites">Panding</li>
+        <li id="checked" data-class=".websites">Complete</li>
+        <li id="checked" data-class=".websites">Cancled</li>
+
+      </ul>
+      <div class="row">
+        <div class="card user">
+          <i class="fa fa-remove"></i>
+          <img data-enlargable width="100" src="image/2.jpg" />
+          <h3 class="text-center">Mhd Khattab</h3>
+          <div class="row">
+            <h5 class="col-xs-4">Amount:</h5>
+            <h5 class="col-xs-8">200$</h5>
+          </div>
+          <div class="row">
+            <h5 class="col-xs-4">Process Id:</h5>
+            <h5 class="col-xs-8">2</h5>
+          </div>
+          <div class="row">
+            <h5 class="col-xs-4">Wallet:</h5>
+            <h5 class="col-xs-8">65784398#$%</h5>
+          </div>
+          <div class="row">
+            <h5 class="col-xs-4">Method:</h5>
+            <h5 class="col-xs-8">By Perfect</h5>
+          </div>
+          <div class="row">
+            <h5 class="col-xs-4">Date:</h5>
+            <h5 class="col-xs-8">12/3/4555</h5>
+          </div>
+          <div class="footer">
+            <button class="btn btn-danger"data-toggle="modal"data-target=".modal3">Cancel</button>
+            <button class="btn btn-success"data-toggle="modal"data-target=".modal4">Accepte</button>
+          </div>
+        </div>
+        <div class="card user">
+          <i class="fa fa-remove"></i>
+          <img data-enlargable width="100" src="image/2.jpg" />
+          <h3 class="text-center">Mhd Khattab</h3>
+          <div class="row">
+            <h5 class="col-xs-4">Amount:</h5>
+            <h5 class="col-xs-8">200$</h5>
+          </div>
+          <div class="row">
+            <h5 class="col-xs-4">Process Id:</h5>
+            <h5 class="col-xs-8">2</h5>
+          </div>
+          <div class="row">
+            <h5 class="col-xs-4">Wallet:</h5>
+            <h5 class="col-xs-8">65784398#$%</h5>
+          </div>
+          <div class="row">
+            <h5 class="col-xs-4">Method:</h5>
+            <h5 class="col-xs-8">By Perfect</h5>
+          </div>
+          <div class="row">
+            <h5 class="col-xs-4">Date:</h5>
+            <h5 class="col-xs-8">12/3/4555</h5>
+          </div>
+          <div class="footer">
+            <button class="btn btn-danger"data-toggle="modal"data-target=".modal3">Cancel</button>
+            <button class="btn btn-success"data-toggle="modal"data-target=".modal4">Accepte</button>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!--End Amin Deposit-->
+
+      <!--Modal Cancele-->
+      <div class="modal fade modal3" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <h4>Add A Message</h4>
+              <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                          aria-hidden="true">&times;</span></button>
+                  <div class="row">
+                      <div class="col-sm-12 text-center col-xs-height">
+                          <form class="signup-popup">
+                            <textarea placeholder="Message" required></textarea>
+                              <div class="modal-footer">
+                                  <button type="submit" class="btn">Ok</a>
+                                  <button class="btn btn-danger button delete" data-dismiss="modal">Close</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+    <!--Modal Accepte-->
+    <div class="modal fade modal4" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <h4>Add A Message</h4>
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="col-sm-12 text-center col-xs-height">
+                            <form class="signup-popup">
+                              <textarea placeholder="Message" required></textarea>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn">Ok</a>
+                                    <button class="btn btn-danger button delete" data-dismiss="modal">Close</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  <script src="js/jq.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

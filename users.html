@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style-admin.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Investment</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class=" navbar navbar-expand-lg navbar-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <span><img src="image/logo.png"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active" id="home">
+                        <a class="nav-link " href="users.html">Users</a>
+                    </li>
+                    <li class="nav-item " id="about-us">
+                        <a class="nav-link" href="investment.html">Investment</a>
+                    </li>
+                    <li class="nav-item " id="plans">
+                        <a class="nav-link" href="deposit.html">Deposit</a>
+                    </li>
+                    <li class="nav-item " id="note">
+                        <a class="nav-link" href="withdraw.html">Withdraw</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="users padding-top">
+        <div class="container">
+            <ul class='list-unstyled '>
+                <li id="all" data-class="all" class="active">All</li>
+                <li id="checked" data-class=".websites">Users</li>
+                <li id="checked" data-class=".websites">Admins</li>
+            </ul>
+            <div class="row">
+                <div class="user card ">
+                    <i class=" text-center fa fa-group"></i>
+                    <div class="row">
+                        <h5 class="col-xs-4">Name:</h5><h5 class="col-xs-8">Lujain Shqer</h5>
+                    </div>
+                    <div class="row">
+                        <h5 class="col-xs-4">Username:</h5><h5 class="col-xs-8">Lujainsh</h5>
+                    </div>
+                    <div class="row">
+                        <h5 class="col-xs-4">Email:</h5><h5 class="col-xs-8">Lujain@gmail.com</h5>
+                    </div>
+                    <div class="row">
+                        <h5 class="col-xs-4">Number:</h5><h5 class="col-xs-8">0854678</h5>
+                    </div>
+                    <div class="row">
+                        <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">37/43/4343</h5>
+                    </div>
+                    <button class="btn btn-danger">Remove Admin</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a class="btn"><i class="fa fa-plus pointer"data-toggle="modal"data-target=".modal4" ></i></a>
+
+
+    <!--Modal 4-->
+    <div class="modal fade modal4" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <h4>Add An Admin</h4>
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="col-sm-12 text-center col-xs-height">
+                            <form class="signup-popup">
+                                <input class="col-xs-12" placeholder="Full Name" type="text" required>
+                                <input class="col-xs-12" placeholder="User Name" type="text" required>
+                                <input class="col-xs-12" placeholder="Number" type="text" required>
+                                <input class="col-xs-12" placeholder="Email" type="email" required>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn">Next</a>
+                                    <button class="btn btn-danger button delete" data-dismiss="modal">Close</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jq.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="api/auth.js"></script>
+</body>
+
+</html>
