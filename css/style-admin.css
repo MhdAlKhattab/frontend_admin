@@ -1,3 +1,77 @@
+  
+  /* Start LogIn & Sign Up*/
+  .login {
+    background-image: url('../image/login&sign.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 5vmin;
+  }
+  
+  .login form {
+    width: 30%;
+    margin: 0 auto;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    background: white;
+  }
+  .sign .overlay{
+    padding-top: 8vh;
+  }
+  
+  .login form .log-header {
+    padding: 4vh 2vmin;
+    background-color: aliceblue;
+    font-weight: 600;
+  }
+  
+  .login form .row {
+    margin: 0;
+    padding: 0 2vh;
+  }
+  
+  .login form select {
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    font-size: 2vmin;
+    color: #1e7aa7;
+    font-weight: 700;
+  }
+  
+  .login form input {
+    border: 0;
+    border-bottom: 1px solid #c5ccd3;
+    width: 90%;
+    border-radius: 0;
+    margin: 0 auto;
+    padding: 3vh;
+  }
+  .login form .log-footer {
+    margin-top: 5vh;
+  }
+  .login form .log-footer button{
+    width: 100%;
+  }
+  .login form .log-footer a{
+    width: 48%;
+    background: #466795;
+    border: 1px solid #466795;
+  }
+  .login form .log-footer a:hover{
+    outline: none;
+  }
+  
+  .login form p {
+    padding: 0 3vh;
+    margin-top: 2vh;
+  }
+  .login form p a {
+    color: #28a745;
+  }
+  .forget-pas button{
+    width: 100% !important;
+  }
+  /* End LogIn & Sign Up*/
 /* Start Deposit Withdraw Investment */
 .withdraw,
 .users {
