@@ -6,7 +6,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         $.ajax({
-            url: "http://127.0.0.1:8000/api/login",
+            url: "http://127.0.0.1:8000/api/admin-login",
             type: "POST",
             data: $("#loginForm").serialize(),
             dataType: 'JSON',
