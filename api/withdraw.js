@@ -41,47 +41,59 @@ $(document).ready(function () {
       }).done(function (items) {
           let output = '';
           let state = '';
+          let icon = '';
 
           if (items.data.length !== 0) {
 
               $.each(items.data, function (key, item) {
 
-                  if (item.state == 0) {
-                      state = `
-                          <div class="footer">
-                              <button class="btn btn-danger canceledButton" data-toggle="modal" data-target=".modal3" data-id="${item.id}">Cancel</button>
-                              <button class="btn btn-success acceptButton" data-toggle="modal" data-target=".modal4" data-id="${item.id}">Accept</button>
-                          </div>
-                      `;
-                  } else {
-                      state = '';
-                  }
+                if (item.state == 0) {
+                    icon = ``;
+                } else if (item.state == 1) {
+                  icon = `<i class="fa fa-remove deleteWithdraw" data-id="${item.id}"></i>`;
 
-                  output += `
-                    <div class="card user">
-                      <i class="fa fa-remove"></i>
-                      <h3 class="text-center">${item.user.first_name} ${item.user.last_name}</h3>
-                      <div class="row">
-                        <h5 class="col-xs-4">Amount:</h5>
-                        <h5 class="col-xs-8">${item.amount}$</h5>
-                      </div>
-                      <div class="row">
-                        <h5 class="col-xs-4">Wallet:</h5>
-                        <h5 class="col-xs-8">${item.wallet}</h5>
-                      </div>
-                      <div class="row">
-                        <h5 class="col-xs-4">Method:</h5>
-                        <h5 class="col-xs-8">${item.method}</h5>
-                      </div>
-                      <div class="row">
-                        <h5 class="col-xs-4">Date:</h5>
-                        <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
-                      </div>
-                      ` + state + `
+                } else if (item.state == 2) {
+                    icon = `<i class="fa fa-remove deleteWithdraw" data-id="${item.id}"></i>`;
+                } else {
+                    icon = ``;
+                }
+
+                if (item.state == 0) {
+                    state = `
+                        <div class="footer">
+                            <button class="btn btn-danger canceledButton" data-toggle="modal" data-target=".modal3" data-id="${item.id}">Cancel</button>
+                            <button class="btn btn-success acceptButton" data-toggle="modal" data-target=".modal4" data-id="${item.id}">Accept</button>
+                        </div>
+                    `;
+                } else {
+                    state = '';
+                }
+
+                output += `
+                  <div class="card user">
+                  ` + icon + `
+                  <h3 class="text-center">${item.user.first_name} ${item.user.last_name}</h3>
+                    <div class="row">
+                      <h5 class="col-xs-4">Amount:</h5>
+                      <h5 class="col-xs-8">${item.amount}$</h5>
                     </div>
-                  `;
+                    <div class="row">
+                      <h5 class="col-xs-4">Wallet:</h5>
+                      <h5 class="col-xs-8">${item.wallet}</h5>
+                    </div>
+                    <div class="row">
+                      <h5 class="col-xs-4">Method:</h5>
+                      <h5 class="col-xs-8">${item.method}</h5>
+                    </div>
+                    <div class="row">
+                      <h5 class="col-xs-4">Date:</h5>
+                      <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
+                    </div>
+                    ` + state + `
+                  </div>
+                `;
 
-              });
+            });
 
               $('#admin-withdraw').empty().append(output);
           } else {
@@ -113,7 +125,6 @@ $(document).ready(function () {
 
                 output += `
                   <div class="card user">
-                    <i class="fa fa-remove"></i>
                     <h3 class="text-center">${item.user.first_name} ${item.user.last_name}</h3>
                     <div class="row">
                       <h5 class="col-xs-4">Amount:</h5>
@@ -170,8 +181,8 @@ $(document).ready(function () {
 
                 output += `
                   <div class="card user">
-                    <i class="fa fa-remove"></i>
-                    <h3 class="text-center">${item.user.first_name} ${item.user.last_name}</h3>
+                  <i class="fa fa-remove deleteWithdraw" data-id="${item.id}"></i>
+                  <h3 class="text-center">${item.user.first_name} ${item.user.last_name}</h3>
                     <div class="row">
                       <h5 class="col-xs-4">Amount:</h5>
                       <h5 class="col-xs-8">${item.amount}$</h5>
@@ -223,8 +234,8 @@ $(document).ready(function () {
 
                 output += `
                   <div class="card user">
-                    <i class="fa fa-remove"></i>
-                    <h3 class="text-center">${item.user.first_name} ${item.user.last_name}</h3>
+                  <i class="fa fa-remove deleteWithdraw" data-id="${item.id}"></i>
+                  <h3 class="text-center">${item.user.first_name} ${item.user.last_name}</h3>
                     <div class="row">
                       <h5 class="col-xs-4">Amount:</h5>
                       <h5 class="col-xs-8">${item.amount}$</h5>
@@ -310,5 +321,25 @@ $(document).ready(function () {
           }
       });
   });
+  $('body').on('click', '.deleteWithdraw', function (e) {
+    e.preventDefault();
+
+    localStorage.setItem('Withdraw_card_id', $(this).data('id'));
+    $.ajax({
+        url: 'http://127.0.0.1:8000/api/delete-withdraw/' + localStorage.getItem('Withdraw_card_id'),
+        type: 'DELETE',
+        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+        dataType: 'json',
+        success: function (data) {
+            localStorage.removeItem('Withdraw_card_id');
+            alert("Deleted Successfully..")
+            location.reload();
+
+        },
+        error: function () {
+            console.log("Error");
+        }
+    });
+});
 
 });

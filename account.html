@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style-admin.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Acount</title>
+
+  <script>
+    // If we do not login yet
+    if (localStorage.getItem("access_token") == null) {
+      window.location = 'login.html';
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Start Navbar -->
+  <!-- Start Navbar -->
+  <nav class=" navbar navbar-expand-lg navbar-light">
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        <span><img src="image/logo.png"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item " id="hideUsers">
+            <a class="nav-link " href="users.html">Users</a>
+          </li>
+          <li class="nav-item" id="about-us">
+            <a class="nav-link" href="investment.html">Investment</a>
+          </li>
+          <li class="nav-item " id="plans">
+            <a class="nav-link" href="deposit.html">Deposit</a>
+          </li>
+          <li class="nav-item " id="note">
+            <a class="nav-link" href="withdraw.html">Withdraw</a>
+          </li>
+          <li class="dropdown nav-item active">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Account<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li id="checkOut"><a href="#">Check Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!--Start Account-->
+  <div class="login">
+    <div class=" padding-top">
+      <form class="center-block" id="forgetForm">
+        <h3 class="text-center log-header color">Change Password</h3>
+        <input class="form-control" type="password" name="old_password" placeholder="Old Password" required />
+        <input class="form-control" type="password" name="new_password" placeholder="New Password" required />
+        <input class="form-control" type="password" name="confirm_new_password" placeholder="Confirm Password"
+          required />
+        <div class="error-message text-center"></div>
+        <div class="log-footer">
+          <button class=" btn btn-success" value="Submit">Submit</button>
+        </div>
+      </form>
+      <a href="control.html" class="btn"><i class="fa fa-chevron-right pointer" id=""></i></a>
+    </div>
+  </div>
+  <!--End Account-->
+
+
+  <script src="js/jq.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="api/auth.js"></script>
+</body>
+
+</html>

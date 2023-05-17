@@ -12,7 +12,8 @@ $(document).ready(function () {
             dataType: 'JSON',
             success: function (data) {
                 localStorage.setItem('access_token', data.access_token);
-                $(location).attr('href', 'users.html');
+                localStorage.setItem('permission', data.permission);
+                $(location).attr('href', 'deposit.html');
             },
             error: function () {
                 $('.error-message').empty().append('<span class="badge badge-danger">Invalid login details</span>');

@@ -147,8 +147,9 @@ body {
 }
 .nodata{
   text-align: center;
-  color: #EEE;
-  font-size: 4vmin;
+  color: #dc3545;
+  font-size: 6vmin;
+  margin-top: 20vh;
 }
 
 /* End FramWork */

@@ -41,10 +41,22 @@ $(document).ready(function () {
         }).done(function (items) {
             let output = '';
             let state = '';
+            let icon = '';
 
             if (items.data.length !== 0) {
 
                 $.each(items.data, function (key, item) {
+
+                    if (item.state == 0) {
+                        icon = ``;
+                    } else if (item.state == 1) {
+                        icon = `<i class="fa fa-remove deleteDeposit" data-id="${item.id}"></i>`;
+
+                    } else if (item.state == 2) {
+                        icon = `<i class="fa fa-remove deleteDeposit" data-id="${item.id}"></i>`;
+                    } else {
+                        icon = ``;
+                    }
 
                     if (item.state == 0) {
                         state = `
@@ -60,7 +72,7 @@ $(document).ready(function () {
                     output += `
 
                     <div class="card user">
-                        <i class="fa fa-remove"></i>
+                        ` + icon + `
                         <img data-enlargable width="100" src="" />
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
@@ -122,7 +134,6 @@ $(document).ready(function () {
                     output += `
 
                     <div class="card user">
-                        <i class="fa fa-remove"></i>
                         <img data-enlargable width="100" src="" />
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
@@ -186,7 +197,7 @@ $(document).ready(function () {
                     output += `
 
                     <div class="card user">
-                        <i class="fa fa-remove"></i>
+                        <i class="fa fa-remove deleteDeposit" data-id="${item.id}"></i>
                         <img data-enlargable width="100" src="" />
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
@@ -245,7 +256,7 @@ $(document).ready(function () {
                     output += `
 
                     <div class="card user">
-                        <i class="fa fa-remove"></i>
+                        <i class="fa fa-remove deleteDeposit" data-id="${item.id}"></i>
                         <img data-enlargable width="100" src="" />
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
@@ -329,6 +340,29 @@ $(document).ready(function () {
             dataType: 'JSON',
             success: function (data) {
                 localStorage.removeItem('deposit_card_id');
+                location.reload();
+
+            },
+            error: function () {
+                console.log("Error");
+            }
+        });
+    });
+
+
+    //Delete Deposit 
+    $('body').on('click', '.deleteDeposit', function (e) {
+        e.preventDefault();
+
+        localStorage.setItem('Deposit_card_id', $(this).data('id'));
+        $.ajax({
+            url: 'http://127.0.0.1:8000/api/delete-deposit/' + localStorage.getItem('Deposit_card_id'),
+            type: 'DELETE',
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            dataType: 'json',
+            success: function (data) {
+                localStorage.removeItem('Deposit_card_id');
+                alert("Deleted Successfully..")
                 location.reload();
 
             },

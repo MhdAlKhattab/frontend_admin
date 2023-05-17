@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    
+    if (localStorage.getItem("permission") == 1) {
+        document.getElementById('hideUsers').style.display = "none";
+      }
 
     'use strict';
     $('img[data-enlargable]').addClass('img-enlargable').click(function(){

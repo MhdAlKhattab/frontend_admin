@@ -86,7 +86,7 @@
 }
 
 .withdraw .card {
-  padding: 8vmin;
+  padding: 3vmin;
   margin-bottom: 5vmin;
   color: aliceblue;
   position: relative;
@@ -200,6 +200,17 @@
   width: 95%;
   margin-bottom: 2vh;
 }
+.modal-content .modal-body .signup-popup .number{
+  width: 100%;
+}
+.modal-content .modal-body .signup-popup select {
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  font-size: 2vmin;
+  color: #1e7aa7;
+  font-weight: 700;
+}
 
 .modal-content .modal-body .signup-popup .modal-footer {
   margin-top: 5vh;
@@ -228,9 +239,8 @@
 }
 
 .user .row {
-  border-bottom: 1px solid #535252;
-  padding: 1vmin;
-  margin: 0;
+  padding: 1vmin 0px;
+  margin: 0px 0vmin;
 }
 
 .users .user h4 {
@@ -245,6 +255,10 @@
 .deposit img{
   width: 100% !important;
   height: 30vh;
+}
+.line{
+  border-bottom: 1px solid #CCC;
+  margin: 0;
 }
 
 @media (max-width: 991px) {
