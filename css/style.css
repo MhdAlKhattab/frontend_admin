@@ -88,7 +88,6 @@ body {
 /* Start FramWork */
 .progress-bar {
   background-color: #004085;
-
 }
 
 .overlay {
@@ -147,8 +146,8 @@ body {
 }
 .nodata{
   text-align: center;
-  color: #dc3545;
-  font-size: 6vmin;
+  color: #FFF;
+  font-size: 5vmin;
   margin-top: 20vh;
 }
 

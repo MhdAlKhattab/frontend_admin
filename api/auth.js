@@ -81,9 +81,8 @@ $(document).ready(function () {
             type: "POST",
             data: $("#changePasswordForm").serialize(),
             dataType: "json",
-            success: function (data) {
-                localStorage.setItem('access_token', data.access_token);
-                $(location).attr('href', 'control.html');
+            success: function (data) {                
+                $(location).attr('href', 'deposit.html');
             },
             error: function (error) {
                 output = '';
@@ -105,22 +104,23 @@ $(document).ready(function () {
     });
 
     // Check Out
-    // $("#checkOut").click(function (e) {
-    //     e.preventDefault();
-    //     $.ajax({
-    //         url: "http://127.0.0.1:8000/api/logout",
-    //         headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
-    //         dataType: "json",
-    //         success: function (data) {
-    //             localStorage.removeItem('access_token');
-    //             localStorage.removeItem('withdraw-method');
-    //             localStorage.removeItem('withdraw-amount');
-    //             localStorage.removeItem('deposit-method');
-    //             localStorage.removeItem('deposit-amount');
-    //             $(location).attr('href', 'login.html');
-    //         },
-    //         error: function (error) {
-    //         }
-    //     });
-    // });
+    $("#checkOut").click(function (e) {
+        e.preventDefault();
+        console.log("hellllo");
+        $.ajax({
+            url: "http://127.0.0.1:8000/api/logout",
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            dataType: "json",
+            success: function (data) {
+                localStorage.removeItem('access_token');
+                localStorage.removeItem('permission-method');
+                localStorage.removeItem('deposit_card_id');
+                localStorage.removeItem('withdraw_card_id');
+                localStorage.removeItem('investment_card_id');
+                $(location).attr('href', 'login.html');
+            },
+            error: function (error) {
+            }
+        });
+    });
 });

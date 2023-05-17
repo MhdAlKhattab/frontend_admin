@@ -48,7 +48,7 @@
           <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Account <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="account.html">Change Password</a></li>
+              <li><a href="change-password.html">Change Password</a></li>
               <li id="checkOut"><a href="#">Cheak Out</a></li>
             </ul>
           </li>
@@ -60,23 +60,24 @@
   <!--Start Admin Investment-->
   <div class="withdraw investment  padding-top">
     <div class="container ">
-        <ul class='list-unstyled '>
-            <li id="all" data-class="all" class="active">All</li>
-            <li id="pendding" data-class=".websites" >Pendding</li>
-            <li id="progress" data-class=".websites" >Progress</li>
-            <li id="complete" data-class=".websites" >Complete</li>
-            <li id="canceled" data-class=".websites" >Cancled</li>
+      <ul class='list-unstyled '>
+        <li id="all" data-class="all" class="active">All</li>
+        <li id="pendding" data-class=".websites">Pendding</li>
+        <li id="progress" data-class=".websites">Progress</li>
+        <li id="complete" data-class=".websites">Complete</li>
+        <li id="canceled" data-class=".websites">Cancled</li>
 
-        </ul>
-        <div class="row" id="admin-investment">
-        </div>
+      </ul>
+      <div class="row" id="admin-investment">
+
+      </div>
     </div>
   </div>
   <!--End Admin Investment-->
 
 
-    <!-- Modal Cancel -->
-    <div class="modal fade modal3" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  <!-- Modal Cancel -->
+  <div class="modal fade modal3" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -132,6 +133,7 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="api/investment.js"></script>
+  <script src="api/auth.js"></script>
 </body>
 
 </html>
