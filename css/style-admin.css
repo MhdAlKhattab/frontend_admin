@@ -313,10 +313,11 @@
     font-size: 15vmin;
     color: #28a745;
   }
-  
-  .statistics .statistic .info{
+
+  .statistics .statistic .info {
     margin: auto;
   }
+
   .piechart {
     margin: 0 auto;
     margin-top: 5vh;
@@ -342,17 +343,20 @@
         #ff8e31 0 200deg,
         #004085 0);
   }
+
   .statistics ul {
     list-style: none;
     padding-left: 0;
     text-align: center;
     margin-top: 10vh;
     color: #beccd9;
-}
-.statistics ul h2{
-  margin-top: -7vmin;
-  margin-bottom: 5vmin;
-}
+  }
+
+  .statistics ul h2 {
+    margin-top: -7vmin;
+    margin-bottom: 5vmin;
+  }
+
   .statistics ul li {
     width: 5vmin;
     height: 5vmin;
@@ -360,25 +364,29 @@
     display: inline-block;
     margin-left: 3vmin;
     cursor: pointer;
-}
-.statistics ul li:first-of-type{
-  background-color: #004085;
-  border: 2px solid #004085;
+  }
 
-}
-.statistics ul li:nth-of-type(2){
-  background-color: #ff8e31;
-  border: 2px solid #ff8e31;
+  .statistics ul li:first-of-type {
+    background-color: #004085;
+    border: 2px solid #004085;
 
-}
-.statistics ul li:last-of-type{
-  background-color: #ddd;
-  border: 2px solid #ddd;
-}
-.h1{
-  color: #beccd9;
-  margin-top: 5vmin;
-}
+  }
+
+  .statistics ul li:nth-of-type(2) {
+    background-color: #ff8e31;
+    border: 2px solid #ff8e31;
+
+  }
+
+  .statistics ul li:last-of-type {
+    background-color: #ddd;
+    border: 2px solid #ddd;
+  }
+
+  .h1 {
+    color: #beccd9;
+    margin-top: 5vmin;
+  }
 
   @supports (display:grid) {
 
@@ -504,49 +512,57 @@
       }
     }
   }
+
   /*ٌreferral */
-  .referral{
+  .referral {
     background-image: url('../image/bubble2.png');
     min-height: 100vh;
     background-size: cover;
   }
-  table {
+
+  .referral .control-table {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 65vh;
+    padding-bottom: 5vmin;
+  }
+
+  .referral table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
     color: #beccd9;
     background-color: rgb(20 35 51 / 90%);
-}
+  }
 
-th {
+  .referral th {
     color: #103e57;
     font-size: 3vmin;
-}
+  }
 
-th,
-td {
+  .referral th,
+  .referral td {
     text-align: left;
     padding: 15px;
     font-weight: 500;
-}
-td span{
-  font-size: 3vmin;
-  color: #ff8e31;
-  font-weight: 700;
-}
+  }
 
-th {
+  .referral td span {
+    font-size: 3vmin;
+    color: #ff8e31;
+    font-weight: 700;
+  }
+
+  .referral th {
     color: white;
     font-weight: 700;
-}
-tr {
-  border-bottom: 1px solid #CCC;
-}
-.control-table {
-  overflow-x: auto;
-  padding-bottom: 5vmin;
-}
+  }
+
+  .referral tr {
+    border-bottom: 1px solid #CCC;
+  }
+
   @media (max-width: 991px) {
     .user {
       width: 45%;
@@ -558,52 +574,63 @@ tr {
       width: 90%;
       text-align: center;
     }
+
     .statistics .statistic {
       width: 85%;
       margin-top: 10vh;
     }
+
     .statistics .statistic:last-of-type {
       margin-top: 2vh;
     }
+
     table {
       width: 150%;
     }
 
   }
+
   @media (max-width: 576px) {
-    .piechart,.chart {
+
+    .piechart,
+    .chart {
       width: 30vh;
       height: 30vh;
     }
+
     .statistics table,
     .statistics table th,
-    .statistics table tr{
+    .statistics table tr {
       margin: auto;
       border-bottom: 1px solid #CCC;
       width: 80%;
       line-height: 3;
     }
-    .statistics table tr{
+
+    .statistics table tr {
       color: #ff8e31;
       font-weight: 800;
       font-size: 4vmin;
     }
-    .statistics table th{
+
+    .statistics table th {
       color: #28a745;
       font-size: 4vmin;
-  
+
     }
-    
-  table {
-    width: 200%;
-  }
+
+    table {
+      width: 200%;
+    }
+    .referral .control-table{
+      max-height: 78vh;
+    }
 
   }
+
   @media (max-width: 410px) {
-  
     table {
       width: 230%;
     }
-  
-  }
 
+  }

@@ -12,10 +12,10 @@
 
     <title>statistics</title>
     <script>
-    // If we do not login yet
-    if (localStorage.getItem("access_token") == null) {
-      window.location = 'login.html';
-    }
+        // If we do not login yet
+        if (localStorage.getItem("access_token") == null) {
+            window.location = 'login.html';
+        }
     </script>
 </head>
 
@@ -47,6 +47,9 @@
                     </li>
                     <li class="nav-item " id="note">
                         <a class="nav-link" href="withdraw.html">Withdraw</a>
+                    </li>
+                    <li class="nav-item " id="note">
+                        <a class="nav-link" href="referral.html">Referral</a>
                     </li>
                     <li class="dropdown nav-item">
                         <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Account<span
@@ -88,7 +91,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="piechart"></div>
                     <ul>
-                        <h2 class="">Deposit:</h2>
+                        <h2 class="">Deposit</h2>
                         <li></li><span>complete :30%</span>
                         <li></li><span>cancel :30%</span>
                         <li></li><span>pendding :30%</span>
@@ -97,7 +100,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="chart"></div>
                     <ul>
-                        <h2 class="">Withdraw:</h2>
+                        <h2 class="">Withdraw</h2>
                         <li></li><span>complete :30%</span>
                         <li></li><span>cancel :30%</span>
                         <li></li><span>pendding :30%</span>
@@ -107,7 +110,7 @@
             <!--Circle-->
             <!--Graph-->
             <table class="graph col-md-8 col-sm-12">
-                <h1 class="h1 text-center">Investment:</h1>
+                <h1 class="h1 text-center">Investment</h1>
                 <thead>
                     <tr>
                         <th scope="col">Item:</th>
@@ -137,12 +140,6 @@
         </div>
     </div>
     <!---->
-    <!-- <div class="row">
- 
-
-    </div>
- -->
-
 
     <script src="js/jq.js"></script>
     <script src="js/main.js"></script>
