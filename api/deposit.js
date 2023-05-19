@@ -73,7 +73,7 @@ $(document).ready(function () {
 
                     <div class="card user">
                         ` + icon + `
-                        <img data-enlargable width="100" src="" />
+                        <img data-enlargable width="100" src="http://127.0.0.1:8000/storage/deposit_images/${item.photo}" />
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
                             <h5 class="col-xs-4">Amount:</h5>
@@ -134,7 +134,7 @@ $(document).ready(function () {
                     output += `
 
                     <div class="card user">
-                        <img data-enlargable width="100" src="" />
+                        <img data-enlargable width="100" src="http://127.0.0.1:8000/storage/deposit_images/${item.photo}" />
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
                             <h5 class="col-xs-4">Amount:</h5>
@@ -198,7 +198,7 @@ $(document).ready(function () {
 
                     <div class="card user">
                         <i class="fa fa-remove deleteDeposit" data-id="${item.id}"></i>
-                        <img data-enlargable width="100" src="" />
+                        <img data-enlargable width="100" src="http://127.0.0.1:8000/storage/deposit_images/${item.photo}" />
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
                             <h5 class="col-xs-4">Amount:</h5>
@@ -257,7 +257,7 @@ $(document).ready(function () {
 
                     <div class="card user">
                         <i class="fa fa-remove deleteDeposit" data-id="${item.id}"></i>
-                        <img data-enlargable width="100" src="" />
+                        <img data-enlargable width="100" src="http://127.0.0.1:8000/storage/deposit_images/${item.photo}" />
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
                             <h5 class="col-xs-4">Amount:</h5>
