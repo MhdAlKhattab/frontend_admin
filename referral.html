@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style-admin.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>statistics</title>
+    <script>
+        // If we do not login yet
+        if (localStorage.getItem("access_token") == null) {
+            window.location = 'login.html';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class=" navbar navbar-expand-lg navbar-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <span><img src="image/logo.png"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item " id="">
+                        <a class="nav-link " href="statisitics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item " id="hideUsers">
+                        <a class="nav-link " href="users.html">Users</a>
+                    </li>
+                    <li class="nav-item" id="about-us">
+                        <a class="nav-link" href="investment.html">Investment</a>
+                    </li>
+                    <li class="nav-item " id="plans">
+                        <a class="nav-link" href="deposit.html">Deposit</a>
+                    </li>
+                    <li class="nav-item " id="note">
+                        <a class="nav-link" href="withdraw.html">Withdraw</a>
+                    </li>
+                    <li class="nav-item active" id="note">
+                        <a class="nav-link" href="referral.html">Referral</a>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Account<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="change-password.html">Change Password</a></li>
+                            <li id="checkOut"><a href="#">Cheak Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="referral padding-top">
+        <div class="container">
+            <h3 class="header text-center">Referral:</h3>
+            <div class="control-table">
+                <table id="investmentTable">
+
+                    <tr style="background-color: black;">
+                        <th>Name</th>
+                        <th>invited</th>
+                        <th>benefit</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr>
+                        <td>Mhd Khattab</td>
+                        <td>Ahmad Ali</td>
+                        <td><span>4$</span></td>
+                        <td>20\2\2024</td>
+
+                    </tr>
+                    <tr>
+                        <td>Ali Omar</td>
+                        <td>Saeed Jad</td>
+                        <td><span>4$</span></td>
+                        <td>5\8\2025</td>
+
+                    </tr>
+                    <tr>
+                        <td rowspan="5">Omar Rebal</td>
+                        <td>Farah RAbee</td>
+                        <td><span>4$</span></td>
+                        <td>5\9\2024</td>
+                    </tr>
+                    <tr>
+                        <td>Samer Shqer</td>
+                        <td><span>4$</span></td>
+                        <td>2\8\2345</td>
+                    </tr>
+                    <tr>
+                        <td>Ali Omari</td>
+                        <td><span>4$</span></td>
+                        <td>7\7\2001</td>
+                    </tr>
+                    <tr>
+                        <td>Rema Jana</td>
+                        <td><span>4$</span></td>
+                        <td>5\5\2030</td>
+                    </tr>
+                    <tr>
+                        <td>Ward Shadee</td>
+                        <td><span>4$</span></td>
+                        <td>9\9\2012</td>
+                    </tr>
+                    <tr>
+                        <td>Shams Abood</td>
+                        <td>Sara Badi</td>
+                        <td><span>4$</span></td>
+                        <td>5\5\2020</td>
+
+                    </tr>
+                    <tr>
+                        <td rowspan="5">Omar Rebal</td>
+                        <td>Farah RAbee</td>
+                        <td><span>4$</span></td>
+                        <td>5\9\2024</td>
+                    </tr>
+                    <tr>
+                        <td>Samer Shqer</td>
+                        <td><span>4$</span></td>
+                        <td>2\8\2345</td>
+                    </tr>
+                    <tr>
+                        <td>Ali Omari</td>
+                        <td><span>4$</span></td>
+                        <td>7\7\2001</td>
+                    </tr>
+                    <tr>
+                        <td>Rema Jana</td>
+                        <td><span>4$</span></td>
+                        <td>5\5\2030</td>
+                    </tr>
+                    <tr>
+                        <td>Ward Shadee</td>
+                        <td><span>4$</span></td>
+                        <td>9\9\2012</td>
+                    </tr>
+                    <tr>
+                        <td>Shams Abood</td>
+                        <td>Sara Badi</td>
+                        <td><span>4$</span></td>
+                        <td>5\5\2020</td>
+
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jq.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

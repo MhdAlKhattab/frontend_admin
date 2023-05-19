@@ -1,4 +1,3 @@
-  
   /* Start LogIn & Sign Up*/
   .login {
     background-image: url('../image/login&sign.jpg');
@@ -6,7 +5,7 @@
     min-height: 100vh;
     padding-bottom: 5vmin;
   }
-  
+
   .login form {
     width: 30%;
     margin: 0 auto;
@@ -14,21 +13,22 @@
     border-radius: 5px;
     background: white;
   }
-  .sign .overlay{
+
+  .sign .overlay {
     padding-top: 8vh;
   }
-  
+
   .login form .log-header {
     padding: 4vh 2vmin;
     background-color: aliceblue;
     font-weight: 600;
   }
-  
+
   .login form .row {
     margin: 0;
     padding: 0 2vh;
   }
-  
+
   .login form select {
     cursor: pointer;
     outline: none;
@@ -37,7 +37,7 @@
     color: #1e7aa7;
     font-weight: 700;
   }
-  
+
   .login form input {
     border: 0;
     border-bottom: 1px solid #c5ccd3;
@@ -46,230 +46,564 @@
     margin: 0 auto;
     padding: 3vh;
   }
+
   .login form .log-footer {
     margin-top: 5vh;
   }
-  .login form .log-footer button{
+
+  .login form .log-footer button {
     width: 100%;
   }
-  .login form .log-footer a{
+
+  .login form .log-footer a {
     width: 48%;
     background: #466795;
     border: 1px solid #466795;
   }
-  .login form .log-footer a:hover{
+
+  .login form .log-footer a:hover {
     outline: none;
   }
-  
+
   .login form p {
     padding: 0 3vh;
     margin-top: 2vh;
   }
+
   .login form p a {
     color: #28a745;
   }
-  .forget-pas button{
+
+  .forget-pas button {
     width: 100% !important;
   }
+
   /* End LogIn & Sign Up*/
-/* Start Deposit Withdraw Investment */
-.withdraw,
-.users {
-  background-image: url('../image/bubble2.png');
-  min-height: 100vh;
-  background-size: cover;
-}
+  /* Start Deposit Withdraw Investment */
+  .withdraw,
+  .users {
+    background-image: url('../image/bubble2.png');
+    min-height: 100vh;
+    background-size: cover;
+  }
 
-.withdraw .row,
-.users .row {
-  justify-content: space-between;
-}
+  .withdraw .row,
+  .users .row {
+    justify-content: space-between;
+  }
 
-.withdraw .card {
-  padding: 3vmin;
+  .withdraw .card {
+    padding: 3vmin;
+    margin-bottom: 5vmin;
+    color: aliceblue;
+    position: relative;
+    margin: 5vmin auto;
+    background: rgb(20 35 51 / 70%);
+  }
+
+  .withdraw .card i {
+    position: absolute;
+    top: 1vmin;
+    right: 3vmin;
+    color: #004085;
+    cursor: pointer;
+  }
+
+  .withdraw .card .footer {
+    margin-top: 2vmin;
+  }
+
+  .withdraw ul li,
+  .users ul li {
+    padding: 1vmin 3vmin;
+    margin-right: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 3vmin;
+    font-weight: 600;
+    color: #FFF;
+    border: 2px solid #FFF;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+
+  .withdraw ul li.active,
+  .withdraw ul li:hover,
+  .users ul li.active,
+  .users ul li:hover {
+    background-color: #FFF;
+    border: 2px solid #FFF;
+    color: #466795
+  }
+
+  .withdraw ul li:hover,
+  .users ul li:hover {
+    cursor: pointer
+  }
+
+  .withdraw img {
+    border-radius: 5px;
+  }
+
+  .deposit h3 {
+    margin-top: 2vmin;
+  }
+
+  /* End Deposit Withdraw Investment */
+  /* Start Users */
+  .users .card {
+    margin-bottom: 5vmin;
+    background-color: rgb(20 35 51 / 70%);
+    color: aliceblue;
+    margin: 5vmin auto;
+    border-radius: 10px;
+  }
+
+  .users .card i {
+    font-size: 7vmin;
+    color: #318ddd;
+    background-color: aliceblue;
+    border-radius: 10px 10px 0 0;
+    padding: 5vmin;
+  }
+
+  .users .card h2 {
+    margin: 2vmin 0;
+    padding: 5vmin;
+  }
+
+  .users .card button {
+    margin-top: 2vmin;
+  }
+
+  /* End Users */
+
+  /* Start Modal */
+
+
+  .modal-content {
+    margin-top: 15vh;
+  }
+
+  .modal-content h4 {
+    color: #004085;
+    padding: 3vh;
+    background: #beccd9;
+    font-size: 5vmin;
+  }
+
+  .modal-content .modal-body .signup-popup {
+    text-align: start;
+    margin-top: 5vh;
+    display: block;
+  }
+
+
+  .modal-content .modal-body .signup-popup input,
+  .modal-content .modal-body .signup-popup select {
+    padding: 1vh;
+    outline: none;
+    width: 95%;
+    margin-bottom: 2vh;
+  }
+
+  .modal-content .modal-body .signup-popup .number {
+    width: 100%;
+  }
+
+  .modal-content .modal-body .signup-popup select {
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    font-size: 2vmin;
+    color: #1e7aa7;
+    font-weight: 700;
+  }
+
+  .modal-content .modal-body .signup-popup .modal-footer {
+    margin-top: 5vh;
+  }
+
+  .modal-content .modal-body .signup-popup .modal-footer :first-child {
+    color: #FFF;
+    border: 1px solid #28a745;
+    background: #28a745;
+  }
+
+  .modal-content .modal-body textarea {
+    outline: none;
+    padding: 2vmin;
+    height: 15vmin;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  /* End Modal */
+  .users .user i {
+    margin-bottom: 2vmin;
+  }
+
+  .user {
+    width: 30%;
+  }
+
+  .user .row {
+    padding: 1vmin 0px;
+    margin: 0px 0vmin;
+  }
+
+  .users .user h4 {
+    font-weight: 600;
+    color: #28a745;
+    padding: 2vmin;
+  }
+
+  .deposit .user {
+    padding: 0;
+    margin-bottom: 5vmin !important;
+  }
+
+  .deposit img {
+    width: 100% !important;
+    height: 30vh;
+  }
+
+  .line {
+    border-bottom: 1px solid #CCC;
+    margin: 0;
+  }
+
+
+
+  /* Statisitics */
+  .statistics {
+    background-image: url('../image/bubble.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    padding-bottom: 5vh;
+  }
+
+  .admin-users {
+    justify-content: space-around;
+  }
+
+  .statistics .statistic {
+    background: rgb(20 35 51 / 90%);
+    margin-top: 15vh;
+    color: #FFF;
+    border: 1px solid #0c5460;
+    height: 30vh;
+    padding: 5vmin 1vmin;
+  }
+
+  .statistics .statistic h3 {
+    font-weight: 600;
+    margin-top: 2vh;
+    color: #ff8e31;
+  }
+
+  .statistics .statistic h5 {
+    padding-top: 2vh;
+  }
+
+  .statistics .statistic i {
+    margin: auto;
+    font-size: 15vmin;
+    color: #28a745;
+  }
+  
+  .statistics .statistic .info{
+    margin: auto;
+  }
+  .piechart {
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: block;
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    background-image: conic-gradient(#28a745 70deg,
+        #fff 0 200deg,
+        #0c5460 0);
+  }
+
+  .chart {
+    margin: 0 auto;
+
+    margin-top: 5vh;
+
+    display: block;
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    background-image: conic-gradient(#ddd 70deg,
+        #ff8e31 0 200deg,
+        #004085 0);
+  }
+  .statistics ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 10vh;
+    color: #beccd9;
+}
+.statistics ul h2{
+  margin-top: -7vmin;
   margin-bottom: 5vmin;
-  color: aliceblue;
-  position: relative;
-  margin: 5vmin auto;
-  background: rgb(20 35 51 / 70%);
+}
+  .statistics ul li {
+    width: 5vmin;
+    height: 5vmin;
+    margin-right: 1vmin;
+    display: inline-block;
+    margin-left: 3vmin;
+    cursor: pointer;
+}
+.statistics ul li:first-of-type{
+  background-color: #004085;
+  border: 2px solid #004085;
+
+}
+.statistics ul li:nth-of-type(2){
+  background-color: #ff8e31;
+  border: 2px solid #ff8e31;
+
+}
+.statistics ul li:last-of-type{
+  background-color: #ddd;
+  border: 2px solid #ddd;
+}
+.h1{
+  color: #beccd9;
+  margin-top: 5vmin;
 }
 
-.withdraw .card i {
-  position: absolute;
-  top: 1vmin;
-  right: 3vmin;
-  color: #004085;
-  cursor: pointer;
+  @supports (display:grid) {
+
+    @media (min-width: 576px) {
+
+      .graph {
+        display: block;
+        width: 900px;
+        height: 400px;
+        margin: auto;
+      }
+
+      .graph caption {
+        display: block;
+      }
+
+      .graph thead {
+        display: none;
+      }
+
+      .graph tbody {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
+        column-gap: 2.5%;
+        align-items: end;
+        height: 100%;
+        margin: 3em 0 1em 2.8em;
+        padding: 0 1em;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+        background: repeating-linear-gradient(180deg,
+            rgba(170, 170, 170, 0.7) 0,
+            rgba(170, 170, 170, 0.7) 1px,
+            transparent 1px,
+            transparent 20%);
+      }
+
+      .graph tbody:before,
+      .graph tbody:after {
+        position: absolute;
+        color: #b0d3ea;
+        left: -3.2em;
+        width: 2.8em;
+        text-align: right;
+        font: bold 80%/120% arial, helvetica, sans-serif;
+      }
+
+      .graph tbody:before {
+        content: "100%";
+        top: -0.6em;
+      }
+
+      .graph tbody:after {
+        content: "0%";
+        bottom: -0.6em;
+      }
+
+      .graph tr {
+        position: relative;
+        display: block;
+      }
+
+      .graph tr:hover {
+        z-index: 999;
+      }
+
+      .graph th,
+      .graph td {
+        display: block;
+        text-align: center;
+      }
+
+      .graph tbody th {
+        position: absolute;
+        top: -3em;
+        left: 0;
+        color: beige;
+        width: 100%;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        text-indent: 0;
+        transform: rotate(-45deg);
+      }
+
+      .graph tbody th:after {
+        content: "";
+      }
+
+      .graph td {
+        width: 60%;
+        height: 100%;
+        background: #28a745;
+        border-radius: 0.5em 0.5em 0 0;
+        transition: background 0.5s;
+        margin: auto;
+      }
+
+      .graph tr:hover td {
+        opacity: 0.7;
+      }
+
+      .graph td span {
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        padding: 0.5em 0;
+        margin: -1em 0 0;
+        font: normal 85%/120% arial, helvetica, sans-serif;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.5s;
+        color: white;
+      }
+
+      .toggleGraph:checked+table td span,
+      .graph tr:hover td span {
+        width: 4em;
+        margin-left: -2em;
+        opacity: 1;
+      }
+    }
+  }
+  /*ٌreferral */
+  .referral{
+    background-image: url('../image/bubble2.png');
+    min-height: 100vh;
+    background-size: cover;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    color: #beccd9;
+    background-color: rgb(20 35 51 / 90%);
 }
 
-.withdraw .card .footer {
-  margin-top: 2vmin;
+th {
+    color: #103e57;
+    font-size: 3vmin;
 }
 
-.withdraw ul li,
-.users ul li {
-  padding: 1vmin 3vmin;
-  margin-right: 5px;
-  border-radius: 5px;
-  display: inline-block;
+th,
+td {
+    text-align: left;
+    padding: 15px;
+    font-weight: 500;
+}
+td span{
   font-size: 3vmin;
-  font-weight: 600;
-  color: #FFF;
-  border: 2px solid #FFF;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.withdraw ul li.active,
-.withdraw ul li:hover,
-.users ul li.active,
-.users ul li:hover {
-  background-color: #FFF;
-  border: 2px solid #FFF;
-  color: #466795
-}
-
-.withdraw ul li:hover,
-.users ul li:hover {
-  cursor: pointer
-}
-
-.withdraw img {
-  border-radius: 5px;
-}
-.deposit h3{
-  margin-top: 2vmin;
-}
-
-/* End Deposit Withdraw Investment */
-/* Start Users */
-.users .card {
-  margin-bottom: 5vmin;
-  background-color: rgb(20 35 51 / 70%);
-  color: aliceblue;
-  margin: 5vmin auto;
-  border-radius: 10px;
-}
-
-.users .card i {
-  font-size: 7vmin;
-  color: #318ddd;
-  background-color: aliceblue;
-  border-radius: 10px 10px 0 0;
-  padding: 5vmin;
-}
-
-.users .card h2 {
-  margin: 2vmin 0;
-  padding: 5vmin;
-}
-
-.users .card button {
-  margin-top: 2vmin;
-}
-
-/* End Users */
-
-/* Start Modal */
-
-
-.modal-content {
-  margin-top: 15vh;
-}
-
-.modal-content h4 {
-  color: #004085;
-  padding: 3vh;
-  background: #beccd9;
-  font-size: 5vmin;
-}
-
-.modal-content .modal-body .signup-popup {
-  text-align: start;
-  margin-top: 5vh;
-  display: block;
-}
-
-
-.modal-content .modal-body .signup-popup input,
-.modal-content .modal-body .signup-popup select {
-  padding: 1vh;
-  outline: none;
-  width: 95%;
-  margin-bottom: 2vh;
-}
-.modal-content .modal-body .signup-popup .number{
-  width: 100%;
-}
-.modal-content .modal-body .signup-popup select {
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  font-size: 2vmin;
-  color: #1e7aa7;
+  color: #ff8e31;
   font-weight: 700;
 }
 
-.modal-content .modal-body .signup-popup .modal-footer {
-  margin-top: 5vh;
+th {
+    color: white;
+    font-weight: 700;
 }
-
-.modal-content .modal-body .signup-popup .modal-footer :first-child {
-  color: #FFF;
-  border: 1px solid #28a745;
-  background: #28a745;
-}
-.modal-content .modal-body textarea{
-  outline: none;
-  padding: 2vmin;
-  height: 15vmin;
-  width: 100%;
-  border-radius: 5px;
-}
-
-/* End Modal */
-.users .user i {
-  margin-bottom: 2vmin;
-}
-
-.user {
-  width: 30%;
-}
-
-.user .row {
-  padding: 1vmin 0px;
-  margin: 0px 0vmin;
-}
-
-.users .user h4 {
-  font-weight: 600;
-  color: #28a745;
-  padding: 2vmin;
-}
-.deposit .user{
-  padding: 0;
-  margin-bottom: 5vmin !important;
-}
-.deposit img{
-  width: 100% !important;
-  height: 30vh;
-}
-.line{
+tr {
   border-bottom: 1px solid #CCC;
-  margin: 0;
 }
-
-@media (max-width: 991px) {
-  .user {
-    width: 45%;
+.control-table {
+  overflow-x: auto;
+  padding-bottom: 5vmin;
+}
+  @media (max-width: 991px) {
+    .user {
+      width: 45%;
+    }
   }
-}
 
-@media (max-width: 768px) {
-  .user {
-    width: 90%;
-    text-align: center;
+  @media (max-width: 768px) {
+    .user {
+      width: 90%;
+      text-align: center;
+    }
+    .statistics .statistic {
+      width: 85%;
+      margin-top: 10vh;
+    }
+    .statistics .statistic:last-of-type {
+      margin-top: 2vh;
+    }
+    table {
+      width: 150%;
+    }
+
   }
-}
+  @media (max-width: 576px) {
+    .piechart,.chart {
+      width: 30vh;
+      height: 30vh;
+    }
+    .statistics table,
+    .statistics table th,
+    .statistics table tr{
+      margin: auto;
+      border-bottom: 1px solid #CCC;
+      width: 80%;
+      line-height: 3;
+    }
+    .statistics table tr{
+      color: #ff8e31;
+      font-weight: 800;
+      font-size: 4vmin;
+    }
+    .statistics table th{
+      color: #28a745;
+      font-size: 4vmin;
+  
+    }
+    
+  table {
+    width: 200%;
+  }
+
+  }
+  @media (max-width: 410px) {
+  
+    table {
+      width: 230%;
+    }
+  
+  }
+

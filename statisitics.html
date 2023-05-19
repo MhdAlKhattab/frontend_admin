@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style-admin.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>statistics</title>
+    <script>
+    // If we do not login yet
+    if (localStorage.getItem("access_token") == null) {
+      window.location = 'login.html';
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class=" navbar navbar-expand-lg navbar-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <span><img src="image/logo.png"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active" id="">
+                        <a class="nav-link " href="statisitics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item " id="hideUsers">
+                        <a class="nav-link " href="users.html">Users</a>
+                    </li>
+                    <li class="nav-item" id="about-us">
+                        <a class="nav-link" href="investment.html">Investment</a>
+                    </li>
+                    <li class="nav-item " id="plans">
+                        <a class="nav-link" href="deposit.html">Deposit</a>
+                    </li>
+                    <li class="nav-item " id="note">
+                        <a class="nav-link" href="withdraw.html">Withdraw</a>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Account<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="change-password.html">Change Password</a></li>
+                            <li id="checkOut"><a href="#">Cheak Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="statistics">
+        <div class="container">
+            <!--Admins And Users-->
+            <div class="row admin-users">
+                <div class="statistic col-md-5 row">
+                    <i class="fa fa-user fa-lg col-4"></i>
+                    <div class=" text-center info col-8">
+                        <h4>The Total Users:</h4>
+                        <h3>7585</h3>
+                        <h5>The percentage</h5>
+                    </div>
+                </div>
+                <div class="statistic col-md-5 row">
+                    <i class="fa fa-group fa-lg col-4"></i>
+                    <div class=" text-center info col-8">
+                        <h4>The Total Admins:</h4>
+                        <h3>36</h3>
+                        <h5>The percentage</h5>
+                    </div>
+                </div>
+            </div>
+            <!--Admins and Users-->
+            <!--Circle-->
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="piechart"></div>
+                    <ul>
+                        <h2 class="">Deposit:</h2>
+                        <li></li><span>complete :30%</span>
+                        <li></li><span>cancel :30%</span>
+                        <li></li><span>pendding :30%</span>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="chart"></div>
+                    <ul>
+                        <h2 class="">Withdraw:</h2>
+                        <li></li><span>complete :30%</span>
+                        <li></li><span>cancel :30%</span>
+                        <li></li><span>pendding :30%</span>
+                    </ul>
+                </div>
+            </div>
+            <!--Circle-->
+            <!--Graph-->
+            <table class="graph col-md-8 col-sm-12">
+                <h1 class="h1 text-center">Investment:</h1>
+                <thead>
+                    <tr>
+                        <th scope="col">Item:</th>
+                        <th scope="col">Percent:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="height:85%">
+                        <th scope="row">Progress</th>
+                        <td><span>85%</span></td>
+                    </tr>
+                    <tr style="height:23%">
+                        <th scope="row">Pendding</th>
+                        <td><span>23%</span></td>
+                    </tr>
+                    <tr style="height:7%">
+                        <th scope="row">Complete</th>
+                        <td><span>7%</span></td>
+                    </tr>
+                    <tr style="height:38%">
+                        <th scope="row">Canceled</th>
+                        <td><span>38%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--Graph-->
+        </div>
+    </div>
+    <!---->
+    <!-- <div class="row">
+ 
+
+    </div>
+ -->
+
+
+    <script src="js/jq.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
