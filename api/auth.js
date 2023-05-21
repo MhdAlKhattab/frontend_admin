@@ -13,7 +13,7 @@ $(document).ready(function () {
             success: function (data) {
                 localStorage.setItem('access_token', data.access_token);
                 localStorage.setItem('permission', data.permission);
-                $(location).attr('href', 'deposit.html');
+                $(location).attr('href', 'statisitics.html');
             },
             error: function () {
                 $('.error-message').empty().append('<span class="badge badge-danger">Invalid login details</span>');
