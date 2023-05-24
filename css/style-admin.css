@@ -1,3 +1,8 @@
+  /* On And Off*/
+  #turn{
+    float: right;
+}
+
   /* Start LogIn & Sign Up*/
   .login {
     background-image: url('../image/login&sign.jpg');
@@ -177,7 +182,9 @@
   .users .card button {
     margin-top: 2vmin;
   }
-
+  .users h5{
+    overflow-wrap: anywhere;
+  }
   /* End Users */
 
   /* Start Modal */
@@ -325,23 +332,21 @@
     width: 40vh;
     height: 40vh;
     border-radius: 50%;
-    background-image: conic-gradient(#28a745 70deg,
+    /* background-image: conic-gradient(#28a745 70deg,
         #fff 0 200deg,
-        #0c5460 0);
+        #0c5460 0); */
   }
 
   .chart {
     margin: 0 auto;
-
     margin-top: 5vh;
-
     display: block;
     width: 40vh;
     height: 40vh;
     border-radius: 50%;
-    background-image: conic-gradient(#ddd 70deg,
+    /* background-image: conic-gradient(#ddd 70deg,
         #ff8e31 0 200deg,
-        #004085 0);
+        #004085 0); */
   }
 
   .statistics ul {
@@ -562,10 +567,15 @@
   .referral tr {
     border-bottom: 1px solid #CCC;
   }
+  /* Referral*/
+  /* Media*/
 
   @media (max-width: 991px) {
     .user {
       width: 45%;
+    }
+    #turn{
+      float: inherit;
     }
   }
 

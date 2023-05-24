@@ -13,9 +13,10 @@
         let output = `
             <tr style="background-color: black;">
                 <th>Name</th>
+                <th>Invited</th>
+                <th>Email</th>
+                <th>Benefit</th>
                 <th>Date</th>
-                <th>Quantity</th>
-                <th>Way</th>
             </tr>
         `;
 
@@ -26,22 +27,24 @@
                 output += `
                     <tr>
                         <td><h5>${item.user.first_name} ${item.user.last_name}</h5></td>
-                        <td><h5>${item.email}$</h5></td>
-                        <td><h5>${item.created_at.substring(0,10)}</h5></td>
+                        <td><h5>${item.referral_first_name} ${item.referral_last_name}</h5></td>
+                        <td><h5>${item.referral_email}</h5></td>
+                        <td><h5>${item.benefit}$</h5></td>
+                        <td><h5>${item.updated_at.substring(0,10)}</h5></td>
                     </tr>
                 `;
 
             });
-            $('#user-referral').empty().append(output);
+            $('#admin-referral').empty().append(output);
 
         } else {
             $('.lodding').remove();
 
             $('.nodata').remove();
 
-            $('#user-referral').parent().append(`<div class="nodata">There Is No Data.</div>`);
+            $('#admin-referral').parent().append(`<div class="nodata">There Is No Data.</div>`);
         }
-
+        console.log('jkkbdvk')
     });
 }
 //  End Get Referral

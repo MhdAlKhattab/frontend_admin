@@ -73,16 +73,14 @@
                     <i class="fa fa-user fa-lg col-4"></i>
                     <div class=" text-center info col-8">
                         <h4>The Total Users:</h4>
-                        <h3>7585</h3>
-                        <h5>The percentage</h5>
+                        <h3 id="num_normal_users"></h3>
                     </div>
                 </div>
                 <div class="statistic col-md-5 row">
                     <i class="fa fa-group fa-lg col-4"></i>
                     <div class=" text-center info col-8">
                         <h4>The Total Admins:</h4>
-                        <h3>36</h3>
-                        <h5>The percentage</h5>
+                        <h3 id="num_admin_users"></h3>
                     </div>
                 </div>
             </div>
@@ -90,21 +88,21 @@
             <!--Circle-->
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <div class="piechart"></div>
+                    <div id="circle-deposit" class="piechart"></div>
                     <ul>
                         <h2 class="">Deposit</h2>
-                        <li></li><span>complete :30%</span>
-                        <li></li><span>cancel :30%</span>
-                        <li></li><span>pendding :30%</span>
+                        <li></li>complete<span> :30%</span>
+                        <li></li>cancel<span> :30%</span>
+                        <li></li>pendding <span>:30%</span>
                     </ul>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <div class="chart"></div>
+                    <div id="circle-withdraw" class="chart"></div>
                     <ul>
                         <h2 class="">Withdraw</h2>
-                        <li></li><span>complete :30%</span>
-                        <li></li><span>cancel :30%</span>
-                        <li></li><span>pendding :30%</span>
+                        <li></li>complete<span> :30%</span>
+                        <li></li>cancel<span> :30%</span>
+                        <li></li>pendding <span>:30%</span>
                     </ul>
                 </div>
             </div>
@@ -119,21 +117,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="height:85%">
+                    <tr id="total_progress">
                         <th scope="row">Progress</th>
-                        <td><span>85%</span></td>
+                        <td><span id="total_progress_invest"></span></td>
                     </tr>
-                    <tr style="height:23%">
+                    <tr id="total_pendding">
                         <th scope="row">Pendding</th>
-                        <td><span>23%</span></td>
+                        <td><span id="total_pendding_invest"></span></td>
                     </tr>
-                    <tr style="height:7%">
+                    <tr id="total_complete">
                         <th scope="row">Complete</th>
-                        <td><span>7%</span></td>
+                        <td><span id="total_complete_invest"></span></td>
                     </tr>
-                    <tr style="height:38%">
+                    <tr id="total_canceled">
                         <th scope="row">Canceled</th>
-                        <td><span>38%</span></td>
+                        <td><span id="total_canceled_invest"></span></td>
                     </tr>
                 </tbody>
             </table>
@@ -146,7 +144,7 @@
     <script src="js/main.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="api/auth.js"></script>
+    <script src="api/statisitics.js"></script>
 </body>
 
 </html>
