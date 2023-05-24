@@ -1,5 +1,5 @@
   /* On And Off*/
-  #turn{
+  .turn{
     float: right;
 }
 
@@ -574,7 +574,7 @@
     .user {
       width: 45%;
     }
-    #turn{
+    .turn{
       float: inherit;
     }
   }

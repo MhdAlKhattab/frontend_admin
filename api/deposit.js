@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     getAllDepositItems();
+    getDepositState();
 
     $('#all').click(function () {
         $(this).addClass('active');
@@ -25,6 +26,73 @@ $(document).ready(function () {
         $(this).siblings().removeClass('active')
         getCanceledDepositItems();
     });
+    $('#on').click(function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active')
+        getOnDeposit();
+    });
+    $('#of').click(function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active')
+        getoffDeposit();
+    });
+    function getDepositState(){
+        $.ajax({
+            url: 'http://127.0.0.1:8000/api/get-deposit-state',
+            type: 'GET',
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            dataType: 'json',
+            success: function (data) {
+                if(data.data == 1){
+                    document.getElementById('on').style.display = "none"
+                }
+                else{
+                    document.getElementById('of').style.display = "none"
+                }
+            },
+            error: function () {
+                console.log("Error");
+            }
+        });
+
+    }
+    function getOnDeposit() {
+
+        $.ajax({
+            url: 'http://127.0.0.1:8000/api/deposit-on',
+            type: 'POST',
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            dataType: 'json',
+            success: function () {
+                alert("Deposits On..")
+                location.reload();
+
+            },
+            error: function () {
+                console.log("Error");
+            }
+        });
+    }
+    function getoffDeposit() {
+        // e.preventDefault();
+
+        $.ajax({
+            url: 'http://127.0.0.1:8000/api/deposit-off',
+            type: 'POST',
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            dataType: 'json',
+            success: function () {
+                alert("Deposits Off..")
+                location.reload();
+
+
+            },
+            error: function () {
+                console.log("Error");
+            }
+        });
+    }
+
 
     //  Start Get All Deposit
     function getAllDepositItems() {

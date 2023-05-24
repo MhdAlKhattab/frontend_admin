@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     getAllInvestmentItems();
+    getWithdrawState();
 
     $('#all').click(function () {
         $(this).addClass('active');
@@ -31,6 +32,72 @@ $(document).ready(function () {
         $(this).siblings().removeClass('active')
         getCanceledInvestmentItems();
     });
+    $('#on').click(function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active')
+        getOnInvestment();
+    });
+    $('#of').click(function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active')
+        getoffInvestment();
+    });
+    function getWithdrawState(){
+        $.ajax({
+            url: 'http://127.0.0.1:8000/api/get-invest-state',
+            type: 'GET',
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            dataType: 'json',
+            success: function (data) {
+                if(data.data == 1){
+                    document.getElementById('on').style.display = "none"
+                }
+                else{
+                    document.getElementById('of').style.display = "none"
+                }
+            },
+            error: function () {
+                console.log("Error");
+            }
+        });
+    
+    }
+    function getOnInvestment() {
+    
+        $.ajax({
+            url: 'http://127.0.0.1:8000/api/invest-on',
+            type: 'POST',
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            dataType: 'json',
+            success: function () {
+                alert("Investments On..")
+                location.reload();
+    
+            },
+            error: function () {
+                console.log("Error");
+            }
+        });
+    }
+    function getoffInvestment() {
+        // e.preventDefault();
+    
+        $.ajax({
+            url: 'http://127.0.0.1:8000/api/invest-off',
+            type: 'POST',
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            dataType: 'json',
+            success: function () {
+                alert("Investments Off..")
+                location.reload();
+    
+    
+            },
+            error: function () {
+                console.log("Error");
+            }
+        });
+    }
 
     //  Start Get All Investment
     function getAllInvestmentItems() {

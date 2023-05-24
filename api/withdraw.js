@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
   getAllWithdrawItems();
+  getWithdrawState();
 
   $('#all').click(function () {
       $(this).addClass('active');
@@ -25,6 +26,73 @@ $(document).ready(function () {
       $(this).siblings().removeClass('active')
       getCanceledWithrawItems();
   });
+  $('#on').click(function () {
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active')
+    getOnWithdraw();
+});
+$('#of').click(function () {
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active')
+    getoffWithdraw();
+});
+function getWithdrawState(){
+    $.ajax({
+        url: 'http://127.0.0.1:8000/api/get-withdraw-state',
+        type: 'GET',
+        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+        dataType: 'json',
+        success: function (data) {
+            if(data.data == 1){
+                document.getElementById('on').style.display = "none"
+            }
+            else{
+                document.getElementById('of').style.display = "none"
+            }
+        },
+        error: function () {
+            console.log("Error");
+        }
+    });
+
+}
+function getOnWithdraw() {
+
+    $.ajax({
+        url: 'http://127.0.0.1:8000/api/withdraw-on',
+        type: 'POST',
+        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+        dataType: 'json',
+        success: function () {
+            alert("Withdraws On..")
+            location.reload();
+
+        },
+        error: function () {
+            console.log("Error");
+        }
+    });
+}
+function getoffWithdraw() {
+    // e.preventDefault();
+
+    $.ajax({
+        url: 'http://127.0.0.1:8000/api/withdraw-off',
+        type: 'POST',
+        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+        dataType: 'json',
+        success: function () {
+            alert("Withdraws Off..")
+            location.reload();
+
+
+        },
+        error: function () {
+            console.log("Error");
+        }
+    });
+}
+
 
   //  Start Get All Withdraw
   function getAllWithdrawItems() {
@@ -321,6 +389,7 @@ $(document).ready(function () {
           }
       });
   });
+  
   $('body').on('click', '.deleteWithdraw', function (e) {
     e.preventDefault();
 
