@@ -73,14 +73,14 @@
                     <i class="fa fa-user fa-lg col-4"></i>
                     <div class=" text-center info col-8">
                         <h4>The Total Users:</h4>
-                        <h3 id="num_normal_users"></h3>
+                        <h3 id="num_normal_users">0</h3>
                     </div>
                 </div>
                 <div class="statistic col-md-5 row">
                     <i class="fa fa-group fa-lg col-4"></i>
                     <div class=" text-center info col-8">
                         <h4>The Total Admins:</h4>
-                        <h3 id="num_admin_users"></h3>
+                        <h3 id="num_admin_users">0</h3>
                     </div>
                 </div>
             </div>
@@ -88,21 +88,21 @@
             <!--Circle-->
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <div id="circle-deposit" class="piechart"></div>
+                    <div id="circle-deposit" class="chart"></div>
                     <ul>
                         <h2 class="">Deposit</h2>
-                        <li></li>complete<span> :30%</span>
-                        <li></li>cancel<span> :30%</span>
-                        <li></li>pendding <span>:30%</span>
+                        <li></li>complete: <span id="total_complete_deposits">0</span>$
+                        <li></li>cancel: <span id="total_canceled_deposits">0</span>$
+                        <li></li>pendding: <span id="total_pendding_deposits">0</span>$
                     </ul>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div id="circle-withdraw" class="chart"></div>
                     <ul>
                         <h2 class="">Withdraw</h2>
-                        <li></li>complete<span> :30%</span>
-                        <li></li>cancel<span> :30%</span>
-                        <li></li>pendding <span>:30%</span>
+                        <li></li>complete: <span id="total_complete_withdraws">0</span>$
+                        <li></li>cancel: <span id="total_canceled_withdraws">0</span>$
+                        <li></li>pendding: <span id="total_pendding_withdraws">0</span>$
                     </ul>
                 </div>
             </div>
@@ -119,19 +119,19 @@
                 <tbody>
                     <tr id="total_progress">
                         <th scope="row">Progress</th>
-                        <td><span id="total_progress_invest"></span></td>
+                        <td><span id="total_progress_invest">0$</span></td>
                     </tr>
                     <tr id="total_pendding">
                         <th scope="row">Pendding</th>
-                        <td><span id="total_pendding_invest"></span></td>
+                        <td><span id="total_pendding_invest">0$</span></td>
                     </tr>
                     <tr id="total_complete">
                         <th scope="row">Complete</th>
-                        <td><span id="total_complete_invest"></span></td>
+                        <td><span id="total_complete_invest">0$</span></td>
                     </tr>
                     <tr id="total_canceled">
                         <th scope="row">Canceled</th>
-                        <td><span id="total_canceled_invest"></span></td>
+                        <td><span id="total_canceled_invest">0$</span></td>
                     </tr>
                 </tbody>
             </table>
