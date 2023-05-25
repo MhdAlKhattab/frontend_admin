@@ -11,7 +11,7 @@ $(document).ready(function () {
             data: $("#loginForm").serialize(),
             dataType: 'JSON',
             success: function (data) {
-                localStorage.setItem('access_token', data.access_token);
+                localStorage.setItem('access_token_admin', data.access_token);
                 localStorage.setItem('permission', data.permission);
                 $(location).attr('href', 'statisitics.html');
             },
@@ -77,7 +77,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: "http://127.0.0.1:8000/api/change-password",
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             type: "POST",
             data: $("#changePasswordForm").serialize(),
             dataType: "json",
@@ -109,10 +109,10 @@ $(document).ready(function () {
         console.log("hellllo");
         $.ajax({
             url: "http://127.0.0.1:8000/api/logout",
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: "json",
             success: function (data) {
-                localStorage.removeItem('access_token');
+                localStorage.removeItem('access_token_admin');
                 localStorage.removeItem('permission-method');
                 localStorage.removeItem('deposit_card_id');
                 localStorage.removeItem('withdraw_card_id');

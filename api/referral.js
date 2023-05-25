@@ -3,7 +3,7 @@
   function getAllUserReferral() {
     $.ajax({
         url: 'http://127.0.0.1:8000/api/get-all-referrals',
-        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
         dataType: 'json',
         success: function (data) {
         },

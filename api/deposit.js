@@ -40,7 +40,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-deposit-state',
             type: 'GET',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 if(data.data == 1){
@@ -61,7 +61,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/deposit-on',
             type: 'POST',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function () {
                 alert("Deposits On..")
@@ -79,7 +79,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/deposit-off',
             type: 'POST',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function () {
                 alert("Deposits Off..")
@@ -98,7 +98,7 @@ $(document).ready(function () {
     function getAllDepositItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-all-deposits',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -184,7 +184,7 @@ $(document).ready(function () {
     function getPenddingDepositItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-pending-deposits',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -247,7 +247,7 @@ $(document).ready(function () {
     function getCompleteDepositItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-complate-deposits',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -306,7 +306,7 @@ $(document).ready(function () {
     function getCanceledDepositItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-canceled-deposits',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -382,7 +382,7 @@ $(document).ready(function () {
         e.preventDefault();
         $.ajax({
             url: "http://127.0.0.1:8000/api/accept-deposit/" + localStorage.getItem('deposit_card_id'),
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             type: "POST",
             data: $("#acceptForm").serialize(),
             dataType: 'JSON',
@@ -402,7 +402,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: "http://127.0.0.1:8000/api/cancel-deposit/" + localStorage.getItem('deposit_card_id'),
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             type: "POST",
             data: $("#canceledFrom").serialize(),
             dataType: 'JSON',
@@ -426,7 +426,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/delete-deposit/' + localStorage.getItem('Deposit_card_id'),
             type: 'DELETE',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 localStorage.removeItem('Deposit_card_id');

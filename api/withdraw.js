@@ -40,7 +40,7 @@ function getWithdrawState(){
     $.ajax({
         url: 'http://127.0.0.1:8000/api/get-withdraw-state',
         type: 'GET',
-        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
         dataType: 'json',
         success: function (data) {
             if(data.data == 1){
@@ -61,7 +61,7 @@ function getOnWithdraw() {
     $.ajax({
         url: 'http://127.0.0.1:8000/api/withdraw-on',
         type: 'POST',
-        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
         dataType: 'json',
         success: function () {
             alert("Withdraws On..")
@@ -79,7 +79,7 @@ function getoffWithdraw() {
     $.ajax({
         url: 'http://127.0.0.1:8000/api/withdraw-off',
         type: 'POST',
-        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
         dataType: 'json',
         success: function () {
             alert("Withdraws Off..")
@@ -98,7 +98,7 @@ function getoffWithdraw() {
   function getAllWithdrawItems() {
       $.ajax({
           url: 'http://127.0.0.1:8000/api/get-all-withdraws',
-          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
           dataType: 'json',
           success: function (data) {
               console.log('access');
@@ -176,7 +176,7 @@ function getoffWithdraw() {
   function getPenddingWithdrawItems() {
       $.ajax({
           url: 'http://127.0.0.1:8000/api/get-pending-withdraws',
-          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
           dataType: 'json',
           success: function (data) {
               console.log('access');
@@ -232,7 +232,7 @@ function getoffWithdraw() {
   function getCompleteWithdrawItems() {
       $.ajax({
           url: 'http://127.0.0.1:8000/api/get-complate-withdraws',
-          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
           dataType: 'json',
           success: function (data) {
               console.log('access');
@@ -285,7 +285,7 @@ function getoffWithdraw() {
   function getCanceledWithrawItems() {
       $.ajax({
           url: 'http://127.0.0.1:8000/api/get-canceled-withdraws',
-          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
           dataType: 'json',
           success: function (data) {
               console.log('access');
@@ -355,7 +355,7 @@ function getoffWithdraw() {
       e.preventDefault();
       $.ajax({
           url: "http://127.0.0.1:8000/api/accept-withdraw/" + localStorage.getItem('withdraw_card_id'),
-          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
           type: "POST",
           data: $("#acceptForm").serialize(),
           dataType: 'JSON',
@@ -375,7 +375,7 @@ function getoffWithdraw() {
 
       $.ajax({
           url: "http://127.0.0.1:8000/api/cancel-withdraw/" + localStorage.getItem('withdraw_card_id'),
-          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+          headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
           type: "POST",
           data: $("#canceledFrom").serialize(),
           dataType: 'JSON',
@@ -397,7 +397,7 @@ function getoffWithdraw() {
     $.ajax({
         url: 'http://127.0.0.1:8000/api/delete-withdraw/' + localStorage.getItem('Withdraw_card_id'),
         type: 'DELETE',
-        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+        headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
         dataType: 'json',
         success: function (data) {
             localStorage.removeItem('Withdraw_card_id');

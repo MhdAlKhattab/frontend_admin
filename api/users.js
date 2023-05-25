@@ -25,7 +25,7 @@ $(document).ready(function () {
     function getAllUsersItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-all-users',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -96,7 +96,7 @@ $(document).ready(function () {
     function getUsersItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-normal-users',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -147,7 +147,7 @@ $(document).ready(function () {
     function getAdminItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-admin-users',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -212,7 +212,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/admin/' + localStorage.getItem('admin_card_id'),
             type: 'DELETE',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 localStorage.removeItem('admin_card_id');
@@ -236,7 +236,7 @@ $(document).ready(function () {
             url: "http://127.0.0.1:8000/api/admin",
             type: 'POST',
             data: data,
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             processData: false,
             contentType: false,

@@ -46,7 +46,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-invest-state',
             type: 'GET',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 if(data.data == 1){
@@ -67,7 +67,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/invest-on',
             type: 'POST',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function () {
                 alert("Investments On..")
@@ -85,7 +85,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/invest-off',
             type: 'POST',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function () {
                 alert("Investments Off..")
@@ -103,7 +103,7 @@ $(document).ready(function () {
     function getAllInvestmentItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-all-investments',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -225,7 +225,7 @@ $(document).ready(function () {
     function getPenddingInvestmentItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-pendding-investments',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -300,7 +300,7 @@ $(document).ready(function () {
     function getCompleteInvestmentItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-complete-investments',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -374,7 +374,7 @@ $(document).ready(function () {
     function getCanceledInvestmentItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-cancele-investments',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -446,7 +446,7 @@ $(document).ready(function () {
     function getProgressInvestmentItems() {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/get-progress-investments',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 console.log('access');
@@ -547,7 +547,7 @@ $(document).ready(function () {
         e.preventDefault();
         $.ajax({
             url: "http://127.0.0.1:8000/api/accept-investment/" + localStorage.getItem('investment_card_id'),
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             type: "POST",
             data: $("#acceptForm").serialize(),
             dataType: 'JSON',
@@ -567,7 +567,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: "http://127.0.0.1:8000/api/cancel-investment/" + localStorage.getItem('investment_card_id'),
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             type: "POST",
             data: $("#canceledFrom").serialize(),
             dataType: 'JSON',
@@ -590,7 +590,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'http://127.0.0.1:8000/api/delete-investment/' + localStorage.getItem('investment_card_id'),
             type: 'DELETE',
-            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token') },
+            headers: { "Authorization": "Bearer " + localStorage.getItem('access_token_admin') },
             dataType: 'json',
             success: function (data) {
                 localStorage.removeItem('investment_card_id');
