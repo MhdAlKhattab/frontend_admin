@@ -145,7 +145,7 @@ $(document).ready(function () {
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
                             <h5 class="col-xs-4">Amount:</h5>
-                            <h5 class="col-xs-8">${item.amount} </h5>
+                            <h5 class="col-xs-8">${item.amount}$</h5>
                         </div>
                         <div class="row">
                             <h5 class="col-xs-4">Process Id:</h5>
@@ -206,7 +206,7 @@ $(document).ready(function () {
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
                             <h5 class="col-xs-4">Amount:</h5>
-                            <h5 class="col-xs-8">${item.amount} </h5>
+                            <h5 class="col-xs-8">${item.amount}$</h5>
                         </div>
                         <div class="row">
                             <h5 class="col-xs-4">Process Id:</h5>
@@ -270,7 +270,7 @@ $(document).ready(function () {
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
                             <h5 class="col-xs-4">Amount:</h5>
-                            <h5 class="col-xs-8">${item.amount} </h5>
+                            <h5 class="col-xs-8">${item.amount}$</h5>
                         </div>
                         <div class="row">
                             <h5 class="col-xs-4">Process Id:</h5>
@@ -329,7 +329,7 @@ $(document).ready(function () {
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="row">
                             <h5 class="col-xs-4">Amount:</h5>
-                            <h5 class="col-xs-8">${item.amount} </h5>
+                            <h5 class="col-xs-8">${item.amount}$</h5>
                         </div>
                         <div class="row">
                             <h5 class="col-xs-4">Process Id:</h5>

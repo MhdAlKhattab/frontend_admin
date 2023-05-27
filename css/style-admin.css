@@ -529,7 +529,7 @@
     overflow-x: auto;
     overflow-y: auto;
     max-height: 65vh;
-    padding-bottom: 5vmin;
+    background: #86adcc;
   }
 
   .referral table {

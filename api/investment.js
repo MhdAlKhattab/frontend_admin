@@ -194,7 +194,7 @@ $(document).ready(function () {
                         <h5 class="col-xs-4">Wallet:</h5><h5 class="col-xs-8">${item.wallet}</h5>
                         </div>
                         <div class="line">
-                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}</h5></div>
+                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}$</h5></div>
                         <div class="row"><h5 class="col-xs-4">Period:</h5><h5 class="col-xs-8">${item.return_period}</h5></div>
                         <div class="row"><h5 class="col-xs-4">Total Periods:</h5><h5 class="col-xs-8">${item.total_returned}</h5></div>
                         </div>
@@ -269,7 +269,7 @@ $(document).ready(function () {
                         <h5 class="col-xs-4">Wallet:</h5><h5 class="col-xs-8">${item.wallet}</h5>
                         </div>
                         <div class="line">
-                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}</h5></div>
+                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}$</h5></div>
                         <div class="row"><h5 class="col-xs-4">Period:</h5><h5 class="col-xs-8">${item.return_period}</h5></div>
                         <div class="row"><h5 class="col-xs-4">Total Periods:</h5><h5 class="col-xs-8">${item.total_returned}</h5></div>
                         </div>
@@ -345,7 +345,7 @@ $(document).ready(function () {
                         <h5 class="col-xs-4">Wallet:</h5><h5 class="col-xs-8">${item.wallet}</h5>
                         </div>
                         <div class="line">
-                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}</h5></div>
+                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}$</h5></div>
                         <div class="row"><h5 class="col-xs-4">Period:</h5><h5 class="col-xs-8">${item.return_period}</h5></div>
                         <div class="row"><h5 class="col-xs-4">Total Periods:</h5><h5 class="col-xs-8">${item.total_returned}</h5></div>
                         </div>
@@ -413,13 +413,13 @@ $(document).ready(function () {
                         <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
                         <div class="line">
                         <div class="row"><h5 class="col-xs-4">Plane Name:</h5><h5 class="col-xs-8">${item.plan_name}</h5></div>
-                        <div class="row"><h5 class="col-xs-4">Amount:</h5><h5 class="col-xs-8">${item.amount}$</h5></div>
+                        <div class="row"><h5 class="col-xs-4">Amount:</h5><h5 class="col-xs-8">${item.amount} $</h5></div>
                         </div>
                         <div class="row line">
                         <h5 class="col-xs-4">Wallet:</h5><h5 class="col-xs-8">${item.wallet}</h5>
                         </div>
                         <div class="line">
-                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}</h5></div>
+                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}$</h5></div>
                         <div class="row"><h5 class="col-xs-4">Period:</h5><h5 class="col-xs-8">${item.return_period}</h5></div>
                         <div class="row"><h5 class="col-xs-4">Total Periods:</h5><h5 class="col-xs-8">${item.total_returned}</h5></div>
                         </div>
@@ -491,7 +491,7 @@ $(document).ready(function () {
                         <h5 class="col-xs-4">Wallet:</h5><h5 class="col-xs-8">${item.wallet}</h5>
                         </div>
                         <div class="line">
-                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}</h5></div>
+                        <div class="row"><h5 class="col-xs-4">Benfit:</h5><h5 class="col-xs-8">${item.return_amount}$</h5></div>
                         <div class="row"><h5 class="col-xs-4">Period:</h5><h5 class="col-xs-8">${item.return_period}</h5></div>
                         <div class="row"><h5 class="col-xs-4">Total Periods:</h5><h5 class="col-xs-8">${item.total_returned}</h5></div>
                         </div>

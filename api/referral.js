@@ -20,7 +20,7 @@
             </tr>
         `;
 
-        if (items.data.length !== 0) {
+        if (items.data.length != 0) {
 
             $.each(items.data, function (key, item) {
 
@@ -42,7 +42,7 @@
 
             $('.nodata').remove();
 
-            $('#admin-referral').parent().append(`<div class="nodata">There Is No Data.</div>`);
+            $('#admin-referral').parent().append(`<div class="nodataTable">There Is No Data.</div>`);
         }
         console.log('jkkbdvk')
     });

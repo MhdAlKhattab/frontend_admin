@@ -150,6 +150,11 @@ body {
   font-size: 5vmin;
   margin-top: 20vh;
 }
+.nodataTable{
+  text-align: center;
+  color: #FFF;
+  font-size: 4vmin;
+}
 
 /* End FramWork */
 /* Media */
