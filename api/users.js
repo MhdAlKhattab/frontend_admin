@@ -115,21 +115,23 @@ $(document).ready(function () {
 
                     output += `
                     <div class="user card ">
-                    <i class=" text-center fa fa-user"></i>
-                    <div class="row">
-                            <h5 class="col-xs-4">Name:</h5><h5 class="col-xs-8">${item.first_name} ${item.last_name}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Username:</h5><h5 class="col-xs-8">${item.user_name}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Email:</h5><h5 class="col-xs-8">${item.email}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Number:</h5><h5 class="col-xs-8">${item.contury_number}${item.phone_number}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at}</h5>
+                        <i class=" text-center fa fa-user"></i>
+                        <div class="user-info">
+                            <div class="row">
+                                <h5 class="col-xs-4">Name:</h5><h5 class="col-xs-8">${item.first_name} ${item.last_name}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Username:</h5><h5 class="col-xs-8">${item.user_name}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Email:</h5><h5 class="col-xs-8">${item.email}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Number:</h5><h5 class="col-xs-8">${item.contury_number}${item.phone_number}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at}</h5>
+                            </div>
                         </div>
                     </div>
                     `;
@@ -168,20 +170,22 @@ $(document).ready(function () {
 
                     <div class="user card ">
                         <i class=" text-center fa fa-group"></i>
-                        <div class="row">
-                            <h5 class="col-xs-4">Name:</h5><h5 class="col-xs-8">${item.first_name} ${item.last_name}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Username:</h5><h5 class="col-xs-8">${item.user_name}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Email:</h5><h5 class="col-xs-8">${item.email}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Number:</h5><h5 class="col-xs-8">${item.contury_number}${item.phone_number}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at}</h5>
+                        <div class="user-info">
+                            <div class="row">
+                                <h5 class="col-xs-4">Name:</h5><h5 class="col-xs-8">${item.first_name} ${item.last_name}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Username:</h5><h5 class="col-xs-8">${item.user_name}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Email:</h5><h5 class="col-xs-8">${item.email}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Number:</h5><h5 class="col-xs-8">${item.contury_number}${item.phone_number}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at}</h5>
+                            </div>
                         </div>
                         <button class="btn btn-danger removeAdmin" data-id="${item.id}">Remove Admin</button>
                     </div>

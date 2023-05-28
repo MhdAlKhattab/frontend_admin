@@ -142,30 +142,31 @@ $(document).ready(function () {
                     <div class="card user">
                         ` + icon + `
                         <img data-enlargable width="100" src="http://127.0.0.1:8000/storage/deposit_images/${item.photo}" />
-                        <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
-                        <div class="row">
-                            <h5 class="col-xs-4">Amount:</h5>
-                            <h5 class="col-xs-8">${item.amount}$</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Process Id:</h5>
-                            <h5 class="col-xs-8">${item.proccess_id} </h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Wallet:</h5>
-                            <h5 class="col-xs-8">${item.wallet} </h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Method:</h5>
-                            <h5 class="col-xs-8">${item.method}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Date</h5>
-                            <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
-                        </div>
+                        <div class="card-content">
+                            <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
+                            <div class="row">
+                                <h5 class="col-xs-4">Amount:</h5>
+                                <h5 class="col-xs-8">${item.amount}$</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Process Id:</h5>
+                                <h5 class="col-xs-8">${item.proccess_id} </h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Wallet:</h5>
+                                <h5 class="col-xs-8">${item.wallet} </h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Method:</h5>
+                                <h5 class="col-xs-8">${item.method}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Date</h5>
+                                <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
+                            </div>
 
-                        ` + state + `
-
+                            ` + state + `
+                        </div>
                     </div>
                     `;
 
@@ -203,31 +204,32 @@ $(document).ready(function () {
 
                     <div class="card user">
                         <img data-enlargable width="100" src="http://127.0.0.1:8000/storage/deposit_images/${item.photo}" />
-                        <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
-                        <div class="row">
-                            <h5 class="col-xs-4">Amount:</h5>
-                            <h5 class="col-xs-8">${item.amount}$</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Process Id:</h5>
-                            <h5 class="col-xs-8">${item.proccess_id} </h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Wallet:</h5>
-                            <h5 class="col-xs-8">${item.wallet} </h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Method:</h5>
-                            <h5 class="col-xs-8">${item.method}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Date</h5>
-                            <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
-                        </div>
-
-                        <div class="footer">
-                            <button class="btn btn-danger canceledButton" data-toggle="modal" data-target=".modal3" data-id="${item.id}">Cancel</button>
-                            <button class="btn btn-success acceptButton" data-toggle="modal" data-target=".modal4" data-id="${item.id}">Accept</button>
+                        <div class="card-content">
+                            <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
+                            <div class="row">
+                                <h5 class="col-xs-4">Amount:</h5>
+                                <h5 class="col-xs-8">${item.amount}$</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Process Id:</h5>
+                                <h5 class="col-xs-8">${item.proccess_id} </h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Wallet:</h5>
+                                <h5 class="col-xs-8">${item.wallet} </h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Method:</h5>
+                                <h5 class="col-xs-8">${item.method}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Date</h5>
+                                <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
+                            </div>
+                            <div class="footer">
+                                <button class="btn btn-danger canceledButton" data-toggle="modal" data-target=".modal3" data-id="${item.id}">Cancel</button>
+                                <button class="btn btn-success acceptButton" data-toggle="modal" data-target=".modal4" data-id="${item.id}">Accept</button>
+                            </div>
                         </div>
                     </div>
                     `;
@@ -267,26 +269,28 @@ $(document).ready(function () {
                     <div class="card user">
                         <i class="fa fa-remove deleteDeposit" data-id="${item.id}"></i>
                         <img data-enlargable width="100" src="http://127.0.0.1:8000/storage/deposit_images/${item.photo}" />
-                        <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
-                        <div class="row">
-                            <h5 class="col-xs-4">Amount:</h5>
-                            <h5 class="col-xs-8">${item.amount}$</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Process Id:</h5>
-                            <h5 class="col-xs-8">${item.proccess_id} </h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Wallet:</h5>
-                            <h5 class="col-xs-8">${item.wallet} </h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Method:</h5>
-                            <h5 class="col-xs-8">${item.method}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Date</h5>
-                            <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
+                        <div class="card-content">
+                            <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
+                            <div class="row">
+                                <h5 class="col-xs-4">Amount:</h5>
+                                <h5 class="col-xs-8">${item.amount}$</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Process Id:</h5>
+                                <h5 class="col-xs-8">${item.proccess_id} </h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Wallet:</h5>
+                                <h5 class="col-xs-8">${item.wallet} </h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Method:</h5>
+                                <h5 class="col-xs-8">${item.method}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Date</h5>
+                                <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
+                            </div>
                         </div>
                     </div>
                     `;
@@ -326,26 +330,28 @@ $(document).ready(function () {
                     <div class="card user">
                         <i class="fa fa-remove deleteDeposit" data-id="${item.id}"></i>
                         <img data-enlargable width="100" src="http://127.0.0.1:8000/storage/deposit_images/${item.photo}" />
-                        <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
-                        <div class="row">
-                            <h5 class="col-xs-4">Amount:</h5>
-                            <h5 class="col-xs-8">${item.amount}$</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Process Id:</h5>
-                            <h5 class="col-xs-8">${item.proccess_id} </h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Wallet:</h5>
-                            <h5 class="col-xs-8">${item.wallet} </h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Method:</h5>
-                            <h5 class="col-xs-8">${item.method}</h5>
-                        </div>
-                        <div class="row">
-                            <h5 class="col-xs-4">Date</h5>
-                            <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
+                        <div class="card-content">
+                            <h3 class="text-center">${item.user.first_name} ${item.user.last_name} </h3>
+                            <div class="row">
+                                <h5 class="col-xs-4">Amount:</h5>
+                                <h5 class="col-xs-8">${item.amount}$</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Process Id:</h5>
+                                <h5 class="col-xs-8">${item.proccess_id} </h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Wallet:</h5>
+                                <h5 class="col-xs-8">${item.wallet} </h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Method:</h5>
+                                <h5 class="col-xs-8">${item.method}</h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="col-xs-4">Date</h5>
+                                <h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
+                            </div>
                         </div>
                     </div>
                     `;

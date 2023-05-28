@@ -13,7 +13,7 @@
         let output = `
             <tr style="background-color: black;">
                 <th>Name</th>
-                <th>Invited</th>
+                <th>Invited By</th>
                 <th>Email</th>
                 <th>Benefit</th>
                 <th>Date</th>
