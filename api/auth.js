@@ -51,7 +51,7 @@ $(document).ready(function () {
             dataType: 'JSON',
             success: function (data) {
                 console.log("yeees");
-                $(location).attr('href', 'login.html');
+                $(location).attr('href', 'index.html');
             },
             error: function (error) {
                 output = '';
@@ -117,7 +117,7 @@ $(document).ready(function () {
                 localStorage.removeItem('deposit_card_id');
                 localStorage.removeItem('withdraw_card_id');
                 localStorage.removeItem('investment_card_id');
-                $(location).attr('href', 'login.html');
+                $(location).attr('href', 'index.html');
             },
             error: function (error) {
             }
