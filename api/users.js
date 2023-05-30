@@ -74,7 +74,7 @@ $(document).ready(function () {
                             <h5 class="col-xs-4">Number:</h5><h5 class="col-xs-8">${item.contury_number}${item.phone_number}</h5>
                         </div>
                         <div class="row">
-                            <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at}</h5>
+                            <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
                         </div>
                     </div>
     
@@ -130,7 +130,7 @@ $(document).ready(function () {
                                 <h5 class="col-xs-4">Number:</h5><h5 class="col-xs-8">${item.contury_number}${item.phone_number}</h5>
                             </div>
                             <div class="row">
-                                <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at}</h5>
+                                <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
                             </div>
                         </div>
                     </div>
@@ -184,7 +184,7 @@ $(document).ready(function () {
                                 <h5 class="col-xs-4">Number:</h5><h5 class="col-xs-8">${item.contury_number}${item.phone_number}</h5>
                             </div>
                             <div class="row">
-                                <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at}</h5>
+                                <h5 class="col-xs-4">Date:</h5><h5 class="col-xs-8">${item.created_at.substring(0, 10)}</h5>
                             </div>
                         </div>
                         <button class="btn btn-danger removeAdmin" data-id="${item.id}">Remove Admin</button>
